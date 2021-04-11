@@ -11,7 +11,7 @@ import { MongooseQueryService } from '@nestjs-query/query-mongoose';
 import { TodoItemEntity } from './entity/todo-item.entity';
 
 @QueryService(TodoItemEntity)
-export class TodoItemService extends MongooseQueryServices<TodoItemEntity> {
+export class TodoItemService extends MongooseQueryService<TodoItemEntity> {
   constructor(@InjectModel(TodoItemEntity.name) model:  Model<TodoItemEntity>) {
     super(model);
   }
